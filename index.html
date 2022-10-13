@@ -5,8 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js"></script>
 </head>
 <body>
-    
+    <div class="header">
+        <h1>LIBRARY</h1>
+    </div>
+    <div class="body">
+        <div class="new">
+            <button class="new" onclick="lentele()">NEW BOOK</button>
+        </div>
+        <div class="form" id="form">
+            <form>
+                <label for="title">Title</label><br>
+                <input type="text" id="title" name="title"><br>
+                <label for="author">Author</label><br>
+                <input type="text" id="author" name="author"><br>
+                <label for="pageNum">Page number</label><br>
+                <input type="text" id="pageNum" name="pageNum"><br>
+                <label for="status">Have read</label><br>
+                <input type="checkbox" name="status" id="status"><br>   
+            </form>
+        </div>
+    </div>
 </body>
 </html>
