@@ -5,6 +5,7 @@ html,*{
     color: #333;
     background: #fff;
     line-height: 1.5;
+    height: auto;
 }
 
 .header{
@@ -44,4 +45,53 @@ button:hover{
     align-items: center;
     flex-direction: column;
     padding: 20px;
+    width: fit-content;
+    margin: 0 auto;
+    border: 2px solid rgb(115, 65, 132);
+}
+
+#form input{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(36, 33, 33);
+    
+}
+
+#form input[type="submit"]{
+    background: rgb(201, 129, 243);
+    border: 2px solid rgb(36, 33, 33);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#form label{
+    font-size: 20px;
+    font-weight: bolder;
+}
+#form input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+
+#form input[type="submit"]:hover{
+    background: rgb(115, 65, 132);
+    color: #fff;
+}
+
+#table{
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+    border: 2px solid rgb(115, 65, 132);
+    display: none;
+}
+
+#table table{
+    border-collapse: collapse;
+    width: 100%;
+    gap: 50px;
 }

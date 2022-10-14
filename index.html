@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
-    <script src="code.js"></script>
+    <script defer src="code.js"></script>
 </head>
 <body>
     <div class="header">
@@ -26,8 +26,18 @@
                 <input type="text" id="pageNum" name="pageNum"><br>
                 <label for="status">Have read</label><br>
                 <input type="checkbox" name="status" id="status"><br>   
+                <button id="submit">SUBMIT</button>
             </form>
         </div>
+        <div class="table">
+            <table id="table">
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Page number</th>
+                    <th>Have read</th>
+                </tr>
+            </table>
     </div>
 </body>
 </html>
