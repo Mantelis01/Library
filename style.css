@@ -1,29 +1,29 @@
+:root{
+    --main-bg-color: #351F39;
+    --secondary: #726A95;
+    --words: #719FB0;
+    --details: #A0C1B8;
+}
+
 html,*{
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    color: #333;
-    background: #fff;
+    color: var(--words);
     line-height: 1.5;
+    height: auto;
+    font-weight: bold;
+    background-color: var(--main-bg-color);
 }
 
 .header{
-    background: #fff;
-    border: 2px solid rgb(162, 162, 162);
+    border-bottom: 2px solid var(--details);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    width: 50vh;
     margin: 0 auto;
-}
-h1{
-    font-size: 2rem;
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: #333;
+    padding: 1rem;
+    width: 50vh;
 }
 
 .new{
@@ -35,8 +35,8 @@ h1{
 }
 
 button{
-    background: rgb(201, 129, 243);
-    border: 2px solid rgb(36, 33, 33);
+    background: var(--secondary);
+    border: 2px solid var(--details);
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
@@ -44,8 +44,8 @@ button{
 }
 
 button:hover{
-    background: rgb(115, 65, 132);
-    color: #fff;
+    background: hsl(252, 27%, 38%);
+    color: var(--words);
 }
 
 
@@ -57,19 +57,19 @@ button:hover{
     padding: 20px;
     width: fit-content;
     margin: 0 auto;
-    border: 2px solid rgb(115, 65, 132);
+    border: 2px solid var(--details);
 }
 
 #form input{
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
-    border: 2px solid rgb(36, 33, 33);
+    border: 2px solid var(--details);
     
 }
 
 #form input[type="submit"]{
-    background: rgb(201, 129, 243);
+    background: var(--secondary);
     border: 2px solid rgb(36, 33, 33);
     padding: 10px;
     margin: 10px;
@@ -85,23 +85,20 @@ button:hover{
     height: 20px;
 }
 
-#form input[type="submit"]:hover{
-    background: rgb(115, 65, 132);
-    color: #fff;
-}
-
 #table{
     justify-content: center;
     align-items: center;
     padding: 20px;
-    width: fit-content;
-    margin: auto;
-    border: 2px solid rgb(115, 65, 132);
+    width: 40vh;
+    margin: 5vh auto;
+    border: 2px solid var(--details);
     display: none;
 }
 
-#table table{
+td, th {
+    padding: 10px;
+    background: var(--main-bg-color);
+    box-sizing: border-box;
+    text-align: left;
     border-collapse: collapse;
-    width: 100%;
-    gap: 50px;
 }

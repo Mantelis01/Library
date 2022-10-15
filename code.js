@@ -1,14 +1,25 @@
+
+
+
+
+///DAR NEZINAU KUR BEDA, BET KLAIDA PASALINANT IR PRIDEDANT KNYGAS I LIBRARY.
+
+
 function lentele() {
     document.getElementById("form").style.display = "flex";
 }
 
-const myLibrary = [];
+let myLibrary = [];
 
 function addBookToLibrary() {
     let name = document.getElementById("title").value;
     let author = document.getElementById("author").value;
     let pages = document.getElementById("pageNum").value;
-    let status = document.getElementById("status").value;
+    let status = document.getElementById("status");
+    if(status.checked == true){
+        status = "Yes";
+    }
+    else status = "No";
     let book = new Book(name, author, pages, status);
     myLibrary.push(book);
     render();
@@ -29,42 +40,25 @@ function render() {
         cell4.innerHTML = myLibrary[i].status;
         cell5.innerHTML = `<button onclick="deleteBook(${i})">Delete</button>`;
     }
-    table.style.display = "flex";
+    table.style.display = "block";
+    document.getElementById("form").style.display = "none";
 }
 
+function deleteBook(){
+    for(let i=0;i<1;i++){
+        document.getElementById("table").deleteRow(i);
+    }
+}
 
-function Book (name, author, pageNum,status) {
-    this.name = name;
-    this.author = author;
-    this.pages= pageNum;
+function Book(name, author, pageNum,status) {
+    this.name=name;
+    this.author=author;
+    this.pages=pageNum;
     this.status=status;
-}
-
-
-function deleteBook(index) {
-    myLibrary.splice(index, 1);
-    render();
-}
-
-function changeStatus(index) {
-    if (myLibrary[index].status == "Read") {
-        myLibrary[index].status = "Not read";
-    } else {
-        myLibrary[index].status = "Read";
-    }
-    render();
-}
-
-function clearTable() {
-    let table = document.getElementById("table");
-    while (table.rows.length > 1) {
-        table.deleteRow(1);
-    }
 }
 
 let submit=document.querySelector("#submit");
 submit.addEventListener("click",(e)=>{
-    console.log(e);
     e.preventDefault();
     addBookToLibrary();
 })
