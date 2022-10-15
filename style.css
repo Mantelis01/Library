@@ -5,15 +5,25 @@ html,*{
     color: #333;
     background: #fff;
     line-height: 1.5;
-    height: auto;
 }
 
 .header{
     background: #fff;
-    border-bottom: 2px solid rgb(162, 162, 162);
+    border: 2px solid rgb(162, 162, 162);
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100px;
+    width: 50vh;
+    margin: 0 auto;
+}
+h1{
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
 }
 
 .new{

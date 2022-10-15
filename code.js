@@ -68,7 +68,3 @@ submit.addEventListener("click",(e)=>{
     e.preventDefault();
     addBookToLibrary();
 })
-
-function clearTable(){
-
-} 
