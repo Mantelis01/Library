@@ -1,10 +1,3 @@
-
-
-
-
-///DAR NEZINAU KUR BEDA, BET KLAIDA PASALINANT IR PRIDEDANT KNYGAS I LIBRARY.
-
-
 function lentele() {
     document.getElementById("form").style.display = "flex";
 }
@@ -27,8 +20,9 @@ function addBookToLibrary() {
 
 function render() {
     let table = document.getElementById("table");
-    for (let i = 0; i < myLibrary.length; i++) {
-        let row = table.insertRow(i);
+    let n=myLibrary.length;
+    for (let i = 0; i < n; i++) {
+        let row = table.insertRow(1);
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
         let cell3 = row.insertCell(2);
@@ -45,7 +39,7 @@ function render() {
 }
 
 function deleteBook(){
-    for(let i=0;i<1;i++){
+    for(let i=0;i<myLibrary.length;i++){
         document.getElementById("table").deleteRow(i);
     }
 }

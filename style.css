@@ -89,7 +89,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     padding: 20px;
-    width: 40vh;
+    width: 50vh;
     margin: 5vh auto;
     border: 2px solid var(--details);
     display: none;
