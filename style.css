@@ -95,7 +95,13 @@ button:hover{
 td, th {
     padding: 10px;
     background: var(--main-bg-color);
-    box-sizing: border-box;
     text-align: left;
     border-collapse: collapse;
+}
+
+th{
+    color: var(--details);
+    font-size: 20px;
+    font-weight: bolder;
+    border-bottom: 1px solid var(--details);
 }
