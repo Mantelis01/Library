@@ -51,8 +51,6 @@ button:hover{
 
 #form{
     display: none;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     padding: 20px;
     width: fit-content;
@@ -62,7 +60,6 @@ button:hover{
 
 #form input{
     padding: 10px;
-    margin: 10px;
     border-radius: 5px;
     border: 2px solid var(--details);
     
@@ -89,7 +86,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     padding: 20px;
-    width: 50vh;
+    width: fit-content;
     margin: 5vh auto;
     border: 2px solid var(--details);
     display: none;
