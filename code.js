@@ -19,28 +19,29 @@ function addBookToLibrary() {
 }
 
 function render() {
-    let table = document.getElementById("table");
-    let n=myLibrary.length;
-    for (let i = 0; i < n; i++) {
-        let row = table.insertRow(1);
-        let cell1 = row.insertCell(0);
-        let cell2 = row.insertCell(1);
-        let cell3 = row.insertCell(2);
-        let cell4 = row.insertCell(3);
-        let cell5 = row.insertCell(4);
+    let table=document.getElementById("table");
+    for(let i=0; i<myLibrary.length; i++){
+        let row = table.insertRow();
+        let cell1 = row.insertCell();
+        let cell2 = row.insertCell();
+        let cell3 = row.insertCell();
+        let cell4 = row.insertCell();
+        let cell5 = row.insertCell();
         cell1.innerHTML = myLibrary[i].name;
         cell2.innerHTML = myLibrary[i].author;
         cell3.innerHTML = myLibrary[i].pages;
         cell4.innerHTML = myLibrary[i].status;
-        cell5.innerHTML = `<button onclick="deleteBook(${i})">Delete</button>`;
-    }
+        cell5.innerHTML = `<button onclick="deleteBook(this)">Remove</button>`;
+}
     table.style.display = "block";
     document.getElementById("form").style.display = "none";
 }
 
-function deleteBook(){
+function deleteBook(r){
     for(let i=0;i<myLibrary.length;i++){
-        document.getElementById("table").deleteRow(i);
+        let table = document.getElementById("table");
+        let row = r.parentNode.parentNode;
+        row.parentNode.removeChild(row);
     }
 }
 
