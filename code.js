@@ -20,19 +20,19 @@ function addBookToLibrary() {
 
 function render() {
     let table=document.getElementById("table");
+    let row = table.insertRow();
+    let cell1 = row.insertCell();
+    let cell2 = row.insertCell();
+    let cell3 = row.insertCell();
+    let cell4 = row.insertCell();
+    let cell5 = row.insertCell();
     for(let i=0; i<myLibrary.length; i++){
-        let row = table.insertRow();
-        let cell1 = row.insertCell();
-        let cell2 = row.insertCell();
-        let cell3 = row.insertCell();
-        let cell4 = row.insertCell();
-        let cell5 = row.insertCell();
         cell1.innerHTML = myLibrary[i].name;
         cell2.innerHTML = myLibrary[i].author;
         cell3.innerHTML = myLibrary[i].pages;
         cell4.innerHTML = myLibrary[i].status;
         cell5.innerHTML = `<button onclick="deleteBook(this)">Remove</button>`;
-}
+}   
     table.style.display = "block";
     document.getElementById("form").style.display = "none";
 }
