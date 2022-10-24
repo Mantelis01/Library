@@ -30,11 +30,27 @@ function render() {
         cell1.innerHTML = myLibrary[i].name;
         cell2.innerHTML = myLibrary[i].author;
         cell3.innerHTML = myLibrary[i].pages;
-        cell4.innerHTML = myLibrary[i].status;
+        cell4.innerHTML = `<button onclick="changeStatus()">${myLibrary[i].status}</button>`;
         cell5.innerHTML = `<button onclick="deleteBook(this)">Remove</button>`;
-}   
+    }   
     table.style.display = "block";
     document.getElementById("form").style.display = "none";
+}
+
+function changeStatus(){
+    const status = document.getElementById("status");
+    for(let i=0;i<myLibrary.length;i++){
+        status.addEventListener('click', ()=>{
+        if(myLibrary[i].status == 'Yes'){
+            myLibrary[i].status.innerHTML = "No";
+            myLibrary[i].status.style.backgroundColor = 'red';
+            }
+        else{
+            myLibrary[i].status.innerHTML = "Yes";
+            myLibrary[i].status.style.backgroundColor='green';
+        }
+        })
+    }
 }
 
 function deleteBook(r){
